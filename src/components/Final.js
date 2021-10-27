@@ -13,7 +13,7 @@ export default class Final extends Component {
   }
   handleSearch = (event) => {
     this.setState({
-      searchText: event.target.value,
+      searchText: [event.target.value],
       show: true,
       showFinal: false,
     });
@@ -68,6 +68,8 @@ export default class Final extends Component {
                 .includes(this.state.searchText.toLowerCase())
             ) {
               return true;
+            } else {
+              return false;
             }
             // if (filterItem.keywords.includes(this.state.searchText)) {
             //   return true;
